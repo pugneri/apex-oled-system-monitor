@@ -1,9 +1,13 @@
 # Apex OLED System Monitor (LibreHardwareMonitor + GameSense)
 
-This project displays live system information (CPU, GPU, RAM) on the OLED screen of SteelSeries keyboards (e.g. Apex 5) using:
+This project is provided **as source code only** and is intended for users who are comfortable running Python scripts or building their own executables.
 
-* **LibreHardwareMonitor** as sensor source (via HTTP API)
+It displays real-time system information (CPU, GPU, RAM) on the OLED screen of SteelSeries keyboards (e.g. Apex 5) using:
+
+* **LibreHardwareMonitor** as sensor source (via HTTP API / data.json)
 * **SteelSeries GG GameSense SDK** for OLED output
+
+No prebuilt binaries are distributed. You can either run the script directly with Python or build your own standalone EXE using PyInstaller.
 
 ## Features
 
@@ -90,19 +94,40 @@ LHM_DATAJSON_URL = "http://localhost:8085/data.json"
 python src/oled_lhm.py
 ```
 
-### Build EXE:
+## Build standalone EXE (optional)
+
+No prebuilt binaries are provided for this project.
+
+If you prefer a standalone executable instead of running the script with Python,
+you can easily build it yourself using **PyInstaller**.
+
+### 1) Install PyInstaller
 
 ```bash
 pip install pyinstaller
+```
+
+### 2) Build the EXE
+
+From the `src` directory:
+
+```bash
 cd src
 pyinstaller --onefile --noconsole --name LHM_OLED oled_lhm.py
 ```
 
-Result:
+### 3) Result
+
+The executable will be created here:
 
 ```
-dist/LHM_OLED.exe
+src/dist/LHM_OLED.exe
 ```
+
+You can then move this EXE anywhere you like and use it for autostart or manual launching.
+
+> Note: The EXE still requires **SteelSeries GG** and **LibreHardwareMonitor** to be installed and running.
+
 
 ---
 
