@@ -60,7 +60,7 @@ pip install -r requirements.txt
 ### 1) Clone repository
 
 ```bash
-git clone https://github.com/YOURNAME/apex-oled-system-monitor.git
+git clone https://github.com/pugneri/apex-oled-system-monitor.git
 cd apex-oled-system-monitor
 ```
 
