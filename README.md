@@ -146,6 +146,10 @@ Use **Windows Task Scheduler**:
 
 ```
 apex-oled-system-monitor/
+ ├──screenshots/
+ │    ├── CPU.png
+ │    ├── GPU.png
+ │    └── RAM.png
  ├── src/
  │    └── oled_lhm.py
  ├── README.md
@@ -153,6 +157,19 @@ apex-oled-system-monitor/
  └── .gitignore
 ```
 ---
+## Screenshots
+
+### CPU page
+![CPU page](screenshots/CPU.png)
+
+### GPU page
+![GPU page](screenshots/GPU.png)
+
+### RAM page
+![RAM page](screenshots/RAM.png)
+
+---
+
 ## Notes
 * GameSense uses a **dynamic local port**. This project automatically detects it.
 * If SteelSeries GG restarts, the script automatically rebinds.
